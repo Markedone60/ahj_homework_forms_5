@@ -21,5 +21,7 @@ export default class Popover {
   show() {
     this.initialize();
     this.popover.classList.remove('hide');
+    this.popover.style.bottom = `${this.element.offsetTop + 50}px`;
+    this.popover.style.left = `${this.element.offsetLeft - ((this.popover.offsetWidth - this.element.offsetWidth) / 2)}px`;
   }
 }
